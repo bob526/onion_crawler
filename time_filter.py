@@ -17,6 +17,10 @@ print(yesterday < nowtime)  #If nowtime = uptime, it should be true = still aliv
 print(yesterday < (nowtime-threeday)) # Should be false
 
 def stillUpOrNot(lastUpTime):
+    '''
+    Parameter: lastUpTime should be a datetime.datetime object.
+    It will reture True = the website is working, False = the website is down
+    '''
     nowtime = datetime.datetime.now()
     oneday = datetime.timedelta(days=1)
     yesterday = nowtime - oneday
